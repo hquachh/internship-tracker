@@ -89,15 +89,48 @@ Your tracking sheet includes these columns:
 InternshipTracker/
 ├── src/
 │   ├── scraping/          # Gmail authentication & email fetching
+│   │   ├── authenticate_gmail.py
+│   │   ├── scrape_starred.py
+│   │   ├── scrape_recent.py
+│   │   └── generate_synthetic.py
 │   ├── preprocessing/     # Text cleaning & dataset building
+│   │   ├── clean_text.py
+│   │   └── build_dataset.py
 │   ├── prediction/        # Classification & Google Sheets updates
+│   │   ├── predict.py
+│   │   └── update_sheets.py
 │   ├── ai_extraction/     # LLM-based information extraction
+│   │   └── extract_info.py
+│   ├── training/          # Model training & evaluation
+│   │   ├── train.py
+│   │   └── evaluate.py
 │   └── config/            # Database utilities & configurations
+│       └── db_utils.py
 ├── models/                # Pre-trained ML models (included)
+│   ├── log_reg.pkl        # Logistic regression classifier
+│   ├── tfidf_subject.pkl  # Subject line vectorizer
+│   ├── tfidf_body.pkl     # Email body vectorizer
+│   └── domain_encoder.pkl # Sender domain encoder
+├── data/                  # Training/validation datasets
+│   ├── train.csv
+│   ├── val.csv
+│   ├── test.csv
+│   ├── raw/               # Raw email data
+│   ├── processed/         # Cleaned datasets
+│   └── datasets/          # Additional datasets
 ├── db/                    # SQLite database files
+│   └── schema.sql         # Database schema
+├── notebooks/             # Jupyter notebooks for analysis
+│   ├── eda.ipynb          # Exploratory data analysis
+│   └── model_prototyping.ipynb
 ├── tests/                 # Unit tests
+│   ├── test_preprocessing.py
+│   ├── test_scraping.py
+│   └── test_training.py
 ├── run.py                 # Main CLI entry point
-└── requirements.txt       # Python dependencies
+├── requirements.txt       # Python dependencies
+├── CLAUDE.md              # Project instructions & goals
+└── README.md              # This file
 ```
 
 ## Customization (Optional)
