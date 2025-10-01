@@ -1,0 +1,102 @@
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.staging
+
+# OAuth tokens and API credentials
+src/config/gmail_config.json
+src/config/gmail_token.json
+src/config/sheets_config.json
+src/config/sheets_token.json
+*.json
+!**/schema.json
+!**/template.json
+
+# Database files (personal data)
+*.db
+*.sqlite
+*.sqlite3
+internship.db
+db/data/
+db/backups/
+
+# Personal data directories
+data/
+logs/
+backups/
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter notebooks (may contain personal data)
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Machine learning models (trained on personal data)
+models/trained/
+# Keep pre-trained model files
+!models/pretrained/
+!models/*.pkl
+!models/*.joblib
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
